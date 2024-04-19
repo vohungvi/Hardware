@@ -11,24 +11,23 @@
 // Windows 头文件:
 #include <windows.h>
 
-// C 运行时头文件
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
 
 
-// TODO: 在此处引用程序需要的其他头文件
+
 #ifdef _DEBUG
-#pragma comment(lib, "../../xcgui/XCGUId.lib")
-#pragma comment(lib, "../../usb_relay_dll/usb_relay_device.lib")
+#pragma comment(lib, "../../lib/xcgui/XCGUId.lib")
+#pragma comment(lib, "../../lib/usb_relay_dll/usb_relay_device.lib")
 #else
-#pragma comment(lib, "../../xcgui/XCGUI.lib")
-#pragma comment(lib, "../../usb_relay_dll/usb_relay_device.lib")
+#pragma comment(lib, "../../lib/xcgui/XCGUI.lib")
+#pragma comment(lib, "../../lib/usb_relay_dll/usb_relay_device.lib")
 #endif
 
-#include "../../xcgui/xcgui.h"
-#include "../../usb_relay_dll/usb_relay_device.h"
+#include "../../lib/xcgui/xcgui.h"
+#include "../../lib/usb_relay_dll/usb_relay_device.h"
 
 #include "str_tools.h"
 
