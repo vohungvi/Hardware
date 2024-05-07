@@ -1,8 +1,7 @@
 #pragma once
 
 #include "resource.h"
-
-#include "GuiApp_English.h"
+#include "..\..\lib\xcgui\xcgui.h"
 
 struct usb_relay_device_info;
 

@@ -1,3 +1,15 @@
 USBRelay/TestAppCode/.vs/
 USBRelay/TestAppCode/CommandApp_USBRelay/Release/
 USBRelay/TestAppCode/GuiApp_English/Release/
+USBRelay/.vs/
+USBRelay/code/CommandApp_USBRelay/Debug/
+USBRelay/code/CommandApp_USBRelay/Debug_static/
+USBRelay/code/CommandApp_USBRelay/Release/
+USBRelay/code/CommandApp_USBRelay/Release_static/
+USBRelay/code/GuiApp_English/Debug/
+USBRelay/RelayUI/obj/
+USBRelay/USBRelayMgr/x64/
+USBRelay/USBRelayMgr/Debug/
+USBRelay/USBRelayMgr/Release/
+*.pdb
+*.lib

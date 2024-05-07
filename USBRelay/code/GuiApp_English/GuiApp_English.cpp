@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "GuiApp_English.h"
+#include "vector"
 
 int APIENTRY _tWinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPTSTR lpCmdLine, int nCmdShow)
 {
@@ -109,6 +110,9 @@ BOOL CUSBRelayWnd::OnFindDeviceBtnClick( HELE hEle,HELE hEleEvent )
 	}
 
 	m_pDeviceList = usb_relay_device_enumerate();
+
+	std::vector<std::string> devices;
+	
 	if (m_pDeviceList)
 	{
 		struct usb_relay_device_info *cur_device = m_pDeviceList;
@@ -116,6 +120,8 @@ BOOL CUSBRelayWnd::OnFindDeviceBtnClick( HELE hEle,HELE hEleEvent )
 		{
 			XComboBox_AddString( m_hDeviceListBox, (wchar_t*)(Ansi2WChar((char*)(cur_device->serial_number)).c_str()) );
 			m_mapIndexToDevice[Ansi2WChar((char*)(cur_device->serial_number))] = cur_device;
+
+			devices.push_back((char*)(cur_device->serial_number));
 
 			cur_device = cur_device->next;
 		}
